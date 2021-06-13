@@ -87,6 +87,26 @@ class User {
 
 
 
+// Inheritance added
+class AdminUser extends User {
+    // add function for password
+    setPassword = (password) => {
+        this.password = password
+    }
+}
+
+// Andrew is the User
+let Andrew = new User("Andrew", "Sapalaran", ["Programming", "Lifting", "Walking with my dog"]);
+console.log(Andrew)
+
+// Jay is the AdminUser
+let Jay = new AdminUser("Jay", "Smith", ["Working", "Sleeping"])
+console.log(Jay);
+
+
+
+
+/* 
 // Now here we create the object 1
 let Andrew = new User("Andrew", "Sapalaran", ["Programming", "Lifting", "Walking with my dog"]);
 
@@ -98,3 +118,4 @@ let John = new User("John", "Smith", ["Soccer", "Basketball"]);
 
 console.log(John)
 console.log(John.getFullName())
+*/
