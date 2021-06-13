@@ -1,3 +1,4 @@
+/* 
 // Creating object
 let user = {
     firstName: 2,
@@ -55,6 +56,45 @@ let user = {
 
 // finds a key that a certain string as a  variable
 // basically printing out the value of each keys
-for (let prop in user) {
-    console.log(user[prop])
+// for (let prop in user) {
+//     console.log(user[prop])
+// }
+
+*/
+
+
+// Creating Classes
+
+
+// Note: this class is just a template not an object yet
+class User {
+    // Constructor method used to initialized the values
+    constructor(firstName, lastName, userHobbies) {
+
+        // `this` keyword specifies to this object
+        // for `this` object we want the value (firstName, lastName, userHobbies)
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.userHobbies = userHobbies;
+
+    }
+
+    // adding function in the class
+    getFullName = () => {
+        return `${this.firstName} ${this.lastName}`
+    }
 }
+
+
+
+// Now here we create the object 1
+let Andrew = new User("Andrew", "Sapalaran", ["Programming", "Lifting", "Walking with my dog"]);
+
+console.log(Andrew)
+console.log(Andrew.getFullName())
+
+// Creating 2nd object
+let John = new User("John", "Smith", ["Soccer", "Basketball"]);
+
+console.log(John)
+console.log(John.getFullName())
