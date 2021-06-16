@@ -42,6 +42,9 @@ class Button {
          // calling the function
          this.setButtonColorInHTML();
 
+         // just to test code we added
+         this.select();
+
     }
 
     /**
@@ -56,6 +59,11 @@ class Button {
      * Select function to set the background color and boxShadow
      */
     select = () => {
+        //setting the box color 
+        this.element.style.backgroundColor = this.color
+
+        //setting box shadow
+        this.element.style.boxShadow = `0px 0px 17px 0px ${this.color}`
     }
 
     /**
