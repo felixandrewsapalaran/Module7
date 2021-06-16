@@ -10,9 +10,6 @@ class Beat {
 
         // here we'll create a new object
         this.audio = new Audio(audioSrc)
-
-        // testing the program 
-        console.log(this.audio)
     }
 
     // Next we'll create a function that would play the audio
