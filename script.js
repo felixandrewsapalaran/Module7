@@ -2,7 +2,7 @@
  * done: Create a keydown listener to track what keys are hit
  * done: Create a Beat class to represent the beat object in utils.js
  * done: Complete triggerBeat() to play upon the press of a,s,d,f,g,h,j,k,l
- * TODO: Button pt1: Initialize color and element values
+ * done: Button pt1: Initialize color and element values
  * TODO: Button pt2: Set button color upon initialization | Initialize button in beats["65"]
  * TODO: Button pt3: Complete select function to set the color and shadow of button upon pressing
  * TODO: Button pt4: Call the select() function upon key press ;)
@@ -19,6 +19,9 @@ let beats = {
     // Note the numbers on the left are called `Keyboard Key codes`
     "65": {
         beat: new Beat("./assets/Piano Chord 331.mp3"),
+        // adding button object
+        //arg1= color and arg2= keycode
+        button: new Button("#00fffe", 65)
     },
     "83": {
         beat: new Beat("./assets/Piano Chord 209.mp3"),
