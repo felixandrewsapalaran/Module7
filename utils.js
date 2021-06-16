@@ -37,7 +37,10 @@ class Button {
         this.keyCode = keyCode
          //also initialize it with element 
          this.element = document.getElementById(keyCode)
-         console.log(this.element)
+         //console.log(this.element)
+
+         // calling the function
+         this.setButtonColorInHTML();
 
     }
 
@@ -45,6 +48,8 @@ class Button {
      * Set the button color based on color specified
      */
     setButtonColorInHTML = () => {
+        //initializing the button color
+        this.element.style.borderColor = this.color
     }
 
     /**
