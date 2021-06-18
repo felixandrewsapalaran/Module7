@@ -16,10 +16,12 @@ class Beat {
     play = () => {
         // if you press the button twice every single time it will reset
         // audio and repeat it again.
-        this.audio.currentTime = 0;
+        this.audio.currentTime = 0
 
         // this would play the audio file
         this.audio.play()
+
+        
     }
 
 }
@@ -42,8 +44,26 @@ class Button {
          // calling the function
          this.setButtonColorInHTML();
 
+         // call this function right away when its created
+        this.setATransitionEndListener();
 
     }
+
+    // Solution 1: remove style on keyup
+    // Solution 2: Wait a certain amount of time to remove style
+    // Solution 3: React on transitioned event
+    setATransitionEndListener = () => {
+        this.element.addEventListener('transitionend', () => {
+            //console.log("transition ended");
+
+            //if the transition ended for both of them we want to deselect the bottom
+            this.deselect(); // this will remove the box shadow & background color
+
+
+        })
+    }  
+        
+
 
     /**
      * Set the button color based on color specified
@@ -64,9 +84,14 @@ class Button {
         this.element.style.boxShadow = `0px 0px 17px 0px ${this.color}`
     }
 
+    // we want some type of function that remove that background shadow color
+
     /**
      * Deselect function to reset background color and boxShadow
      */
     deselect = () => {
+        // no background color
+        this.element.style.backgroundColor = "transparent"
+        this.elementstyle.boxShadow = "none"
     }
 }
