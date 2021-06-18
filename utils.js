@@ -92,6 +92,6 @@ class Button {
     deselect = () => {
         // no background color
         this.element.style.backgroundColor = "transparent"
-        this.elementstyle.boxShadow = "none"
+        this.element.style.boxShadow = "none"
     }
 }
