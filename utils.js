@@ -42,8 +42,6 @@ class Button {
          // calling the function
          this.setButtonColorInHTML();
 
-         // just to test code we added
-         this.select();
 
     }
 
